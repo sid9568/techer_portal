@@ -1,0 +1,46 @@
+<style>
+   body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   }
+   .topnav {
+   overflow: hidden;
+   display: flex;
+   justify-content: space-between;
+   background-color: #ffff;
+   padding: 23px;
+   }
+   .topnav a {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 20px 20px;
+   text-decoration: none;
+   font-size: 17px;
+   }
+   .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+   }
+   .topnav a.active {
+   color: red;
+   font-size: 30px;
+   font-weight:600;
+   }
+   .topnav a.logout {
+   color: black;
+   font-size: 25px;
+   font-weight:600;
+   }
+</style>
+</head>
+<body>
+   <div class="topnav">
+      <div>
+         <a class="active" href="#home">Teachers</a>
+      </div>
+      <div>
+         <a class="logout" href="#home">Home</a>
+         <%= link_to "Logout", teachers_logout_path, method: :delete, data: { confirm: "Are you sure?" }, class:"logout" %>
+      </div>
+   </div>
